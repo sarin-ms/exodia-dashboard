@@ -1,0 +1,460 @@
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 22px;
+}
+.metric {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 20px 19px 18px;
+  border-radius: 8px;
+  min-width: 0;
+  transition: border-color 0.2s;
+}
+.metric:hover {
+  border-color: #756086;
+}
+.metric > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.metric > div > span {
+  font-size: 9px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+.metric i {
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  width: 31px;
+  height: 31px;
+  color: var(--color-lavender);
+  background: #c4adea14;
+}
+.metric strong {
+  display: block;
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  margin-top: 22px;
+}
+.metric p {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  color: var(--color-faint);
+  font-size: 8px;
+  margin-top: 17px;
+  line-height: 1.5;
+}
+.peach i {
+  color: var(--color-peach);
+  background: #efc3a414;
+}
+.green i {
+  color: var(--color-green);
+  background: #a2d9bb14;
+}
+.gold i {
+  color: var(--color-gold);
+  background: #e3c38414;
+}
+.chartGrid,
+.bottomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(280px, 1fr);
+  gap: 21px;
+  margin-bottom: 22px;
+}
+.chartLegend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23px 22px 0;
+  font-size: 8px;
+  color: var(--color-muted);
+}
+.chartLegend > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.chartLegend i {
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  background: var(--color-lavender);
+}
+.chartLegend > span:nth-child(2) i {
+  background: #4c425e;
+}
+.chartLegend small {
+  margin-left: auto;
+  font-size: 6px;
+  letter-spacing: 0.8px;
+  color: var(--color-faint);
+}
+.chart {
+  height: 177px;
+  margin: 23px 22px 19px;
+  display: flex;
+  gap: 17px;
+}
+.axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-faint);
+  padding-bottom: 25px;
+  font-size: 8px;
+  width: 13px;
+}
+.plot {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.gridLines {
+  position: absolute;
+  inset: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gridLines i {
+  border-top: 1px dashed #302a3a99;
+}
+.bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 11px;
+}
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+}
+.barTrack {
+  display: flex;
+  align-items: end;
+  height: calc(100% - 25px);
+  width: 100%;
+}
+.bar {
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0.85;
+}
+.confirmed {
+  background: linear-gradient(to top, #847099, #c4adea);
+}
+.other {
+  background: #493e59;
+}
+.day small {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  padding-top: 13px;
+  font-size: 7px;
+  text-align: center;
+  color: var(--color-faint);
+}
+.panelFoot {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding: 15px 22px;
+  color: var(--color-faint);
+  font-size: 7px;
+}
+.panelFoot > span:first-child {
+  font-size: 6px;
+  letter-spacing: 0.9px;
+}
+.panelFoot > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.panelFoot i {
+  width: 4px;
+  height: 4px;
+  background: var(--color-green);
+  border-radius: 50%;
+}
+.donutWrap {
+  display: grid;
+  place-items: center;
+  padding: 22px 0 18px;
+}
+.donut {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  padding: 7px;
+  transform: rotate(-90deg);
+}
+.donut > div {
+  width: 100%;
+  height: 100%;
+  background: var(--color-surface);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transform: rotate(90deg);
+}
+.donut strong {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+.donut small {
+  font-size: 6px;
+  color: var(--color-muted);
+  letter-spacing: 1.1px;
+}
+.welcomeLegend {
+  padding: 0 22px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.welcomeLegend > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--color-muted);
+}
+.welcomeLegend span {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.welcomeLegend i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--color-lavender);
+  border-radius: 1px;
+}
+.welcomeLegend > div:nth-child(2) i {
+  background: #494154;
+}
+.welcomeLegend b {
+  font-weight: 400;
+  color: var(--color-text);
+}
+.welcomeLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-lavender);
+  font-size: 9px;
+  padding: 15px 22px;
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.stacks {
+  padding: 5px 22px 21px;
+}
+.stackRow {
+  display: block;
+  margin-top: 20px;
+}
+.stackRow > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stackNumber {
+  color: var(--color-faint);
+  font-size: 7px;
+  font-family: monospace;
+}
+.stackRow strong {
+  font-weight: 400;
+  font-size: 10px;
+}
+.stackRow small {
+  margin-left: auto;
+  font-size: 10px;
+}
+.stackRow small > span {
+  color: var(--color-faint);
+  font-size: 8px;
+}
+.progress {
+  height: 3px;
+  background: #2a2635;
+  border-radius: 5px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+}
+.glance {
+  padding: 4px 22px 12px;
+}
+.glance a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 0;
+}
+.glance a > span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: #a2d9bb0f;
+  color: var(--color-green);
+  border-radius: 6px;
+}
+.glance a:nth-child(2) > span {
+  background: #e3c38410;
+  color: var(--color-gold);
+}
+.glance a > div {
+  font-size: 9px;
+  flex: 1;
+}
+.glance small {
+  display: block;
+  font-size: 7px;
+  color: var(--color-faint);
+  margin-top: 6px;
+}
+.glance b {
+  font-size: 14px;
+  font-weight: 400;
+}
+.glance a > svg {
+  color: var(--color-faint);
+}
+.tableFoot {
+  padding: 17px 22px;
+  border-top: 1px solid var(--color-border);
+  font-size: 8px;
+  color: var(--color-faint);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.closing {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 23px;
+  border: 1px solid #c4adea20;
+  background: linear-gradient(110deg, #c4adea09, #efc3a405);
+  border-radius: 8px;
+  color: var(--color-lavender);
+}
+.closing > span:first-of-type {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+.closing em {
+  font-style: normal;
+  color: var(--color-peach);
+}
+.closing > span:last-child {
+  margin-left: auto;
+  font-size: 7px;
+  letter-spacing: 1.1px;
+  color: var(--color-faint);
+}
+.waiting {
+  margin-top: 20px;
+  color: var(--color-faint);
+  font-size: 10px;
+}
+@media (max-width: 1250px) {
+  .metrics {
+    gap: 10px;
+  }
+  .metric {
+    padding: 17px 14px;
+  }
+  .chartGrid,
+  .bottomGrid {
+    grid-template-columns: minmax(0, 1.7fr) minmax(250px, 1fr);
+    gap: 17px;
+  }
+  .bars {
+    gap: 8px;
+  }
+  .metric p {
+    font-size: 7px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 961px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chartGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 730px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metric strong {
+    font-size: 28px;
+  }
+  .chartGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+  .closing > span:last-child {
+    display: none;
+  }
+  .chartLegend {
+    gap: 11px;
+  }
+}
+@media (max-width: 380px) {
+  .metric {
+    padding: 14px 11px;
+  }
+  .metric i {
+    width: 26px;
+    height: 26px;
+  }
+  .metric > div > span {
+    font-size: 8px;
+  }
+}

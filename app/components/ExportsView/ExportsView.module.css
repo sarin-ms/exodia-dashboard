@@ -1,0 +1,127 @@
+.scope {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+.scope > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.scope svg {
+  color: var(--color-lavender);
+}
+.scope strong {
+  font-weight: 450;
+  font-size: 12px;
+}
+.scope p {
+  color: var(--color-muted);
+  margin-top: 8px;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.scope label {
+  color: var(--color-muted);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.scope select {
+  font-size: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.export {
+  padding: 26px;
+}
+.icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  color: var(--color-lavender);
+  border: 1px solid #c4adea22;
+  background: #c4adea0b;
+  border-radius: 11px;
+  margin-bottom: 24px;
+}
+.export:nth-child(2) .icon,
+.export:nth-child(5) .icon {
+  color: var(--color-peach);
+  background: #efc3a40b;
+  border-color: #efc3a422;
+}
+.export h2 {
+  font-size: 16px;
+  font-weight: 450;
+}
+.export p {
+  margin-top: 11px;
+  font-size: 11px;
+  color: var(--color-muted);
+  line-height: 1.8;
+  min-height: 58px;
+}
+.exportMeta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 19px;
+  margin: 20px 0;
+  font-size: 8px;
+  color: var(--color-faint);
+}
+.export button {
+  width: 100%;
+}
+.success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-green);
+  padding: 15px 19px;
+  border: 1px solid #a2d9bb33;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.note {
+  color: var(--color-faint);
+  font-size: 10px;
+  line-height: 1.9;
+  margin-top: 23px;
+  max-width: 730px;
+}
+@media (max-width: 1100px) and (min-width: 961px), (max-width: 750px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scope {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .scope label {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .scope select {
+    width: 100%;
+  }
+}

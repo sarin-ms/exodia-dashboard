@@ -1,0 +1,101 @@
+@import "./styles/tokens.css";
+@font-face {
+  font-family: "Exodia Spin Cycle";
+  src: url("/fonts/spin-cycle.ttf") format("truetype");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background: none;
+  border: none;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+input,
+select {
+  min-width: 0;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  border-radius: 7px;
+  padding: 11px 13px;
+  outline: none;
+}
+input::placeholder {
+  color: var(--color-faint);
+}
+:focus-visible {
+  outline: 2px solid var(--color-lavender);
+  outline-offset: 4px;
+}
+input:focus,
+select:focus {
+  border-color: var(--color-lavender);
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+svg {
+  flex-shrink: 0;
+}
+::selection {
+  background: #b59acd55;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

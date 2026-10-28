@@ -1,0 +1,28 @@
+.error {
+  position: fixed;
+  z-index: 90;
+  top: 78px;
+  right: 24px;
+  left: max(24px, calc(var(--sidebar-width) + 24px));
+  padding: 16px 20px;
+  border: 1px solid var(--color-error);
+  background: var(--color-surface);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px #0005;
+  font-size: 13px;
+}
+.error button {
+  flex-shrink: 0;
+  color: var(--color-peach);
+  text-decoration: underline;
+}
+@media (max-width: 960px) {
+  .error {
+    left: 16px;
+    right: 16px;
+    top: 70px;
+  }
+}

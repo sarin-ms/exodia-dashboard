@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.cache/
+planning/
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+database/
+tests/
+scripts/

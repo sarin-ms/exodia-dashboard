@@ -1,0 +1,19 @@
+:root {
+  --color-background: #0e0d16;
+  --color-sidebar: #111019;
+  --color-surface: #17151f;
+  --color-elevated: #201d2b;
+  --color-border: #2a2635;
+  --color-text: #f0ebf4;
+  --color-muted: #a19aac;
+  --color-faint: #726a80;
+  --color-lavender: #c4adea;
+  --color-peach: #efc3a4;
+  --color-green: #a2d9bb;
+  --color-gold: #e3c384;
+  --color-error: #e9a1a9;
+  --font-body: "Rubik Variable", "Rubik", sans-serif;
+  --font-heading: "GC Palioka", "Rubik Variable", "Rubik", sans-serif;
+  --font-brand: "Exodia Spin Cycle", sans-serif;
+  --sidebar-width: 238px;
+}

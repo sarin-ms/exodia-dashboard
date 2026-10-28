@@ -1,0 +1,124 @@
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 10px;
+  margin-bottom: 26px;
+}
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 25px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  color: var(--color-lavender);
+  background: #c4adea12;
+  border: 1px solid #c4adea22;
+  font-size: 17px;
+}
+.identity > div {
+  flex: 1;
+}
+.identity h2 {
+  font-size: 21px;
+  font-weight: 450;
+}
+.identity p {
+  font-size: 10px;
+  color: var(--color-muted);
+  margin-top: 9px;
+  line-height: 1.8;
+}
+.identity p span {
+  margin: 0 6px;
+}
+.identity > small {
+  width: 100%;
+  color: var(--color-gold);
+  font-size: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.card {
+  padding: 25px;
+}
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 450;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+.card h2 svg {
+  color: var(--color-lavender);
+}
+.card dl {
+  margin: 0;
+}
+.card dl > div {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 22px;
+  line-height: 1.7;
+  font-size: 11px;
+}
+.card dt {
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+.card dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.gateState {
+  margin-top: 25px;
+}
+.gateState p,
+.note,
+.stale {
+  font-size: 10px;
+  color: var(--color-muted);
+  line-height: 1.9;
+  margin-top: 15px;
+}
+.stale {
+  color: var(--color-gold);
+}
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .identity {
+    padding: 20px;
+  }
+  .identity > div {
+    min-width: 160px;
+  }
+  .identity h2 {
+    font-size: 18px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card dl > div {
+    gap: 15px;
+    font-size: 10px;
+  }
+}
